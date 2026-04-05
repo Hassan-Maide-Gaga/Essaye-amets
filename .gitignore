@@ -1,48 +1,78 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+out/
+*.tsbuildinfo
+
+# Environment variables (secrets, clés API)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.env
+
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
-
-# Dependencies
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# Environment variables
-.env
-.env.local
-.env.production
-.env.development
-*.env*
-
-# Build outputs
-build
-dist
 
 # Cache directories
-.cache
-.parcel-cache
-.vite
+.cache/
+.parcel-cache/
+.vite/
+.eslintcache
+.vercel/
 
-# Testing coverage
-coverage
+# Supabase (ne jamais pusher les fichiers de configuration sensibles)
+supabase/.temp/
+supabase/.branches/
+supabase/.env
+supabase/.env.local
+supabase/.env.*.local
 
-# System files
+# Supabase edge functions (le dossier node_modules à l'intérieur)
+supabase/functions/**/node_modules/
+supabase/functions/**/.env
+
+# Local Supabase credentials
+~/.supabase/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
 Thumbs.db
 desktop.ini
+
+# System files
+.directory
+*.pid
+*.seed
+*.pid.lock
+
+# Testing coverage
+coverage/
+.nyc_output/
+
+# Misc
+*.log
+*.tmp
+*.temp
+.vercel
+.netlify
+
+# React / Vite specific
+*.local
+*.tsbuildinfo
